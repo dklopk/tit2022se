@@ -3,39 +3,37 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>个人社保计算软件</title>
-		<!-- 让当前网页更好的适应移动设备 -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!-- 自适应屏幕大小 -->
 		<!-- 新 Bootstrap 核心 CSS 文件 -->
 		<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		 
 		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		 
 		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		
-		<script>
-			function calc(){
-				//1.取用户输入的值
+	    <script>
+			function calc() {
+				//1. 取用户输入的值
 				sal=document.getElementById("salary").value;
-				//2.把sa转成数字
+				//2. 把sal转成数字
 				salnum=parseInt(sal);
-				//3.开始计算 养老
+				//3. 开始计算：养老
 				ylgr=salnum*0.08;
 				ylgs=salnum*0.2;
-				//4.把计算结果放到单元格里
+				//4. 把计算结果放到单元格里
 				document.getElementById("ylgr").innerText=ylgr;
 				document.getElementById("ylgs").innerText=ylgs;
-				//5.
+				// 其余计算参照以上代码和思路
 			}
 		</script>
 	</head>
 	<body>
 		<div class="container">
 			<h1>个人社保计算软件Web版-太工张雅俊</h1>
-			<table>
+			<table class="table table-bordered text-center">
 				<tr>
 					<td>工资</td>
-					<!-- 跨单元格 -->
 					<td colspan="3">
 						<input class="form-control" type="text" id="salary"/>
 					</td>
@@ -101,7 +99,7 @@
 				</tr>
 				<tr>
 					<td>总额</td>
-					<td></td>
+					<td colspan="4"></td>
 				</tr>
 			</table>
 		</div>
